@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+:root {
+  --mainColor: #363636;
+  --secondColor: #414141;
+  --acsentColor: #0d6efd;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--mainColor);
+  font-family: "Montserrat", sans-serif;
+}
+
+/* NAVBAR START */
+.nav-dark {
+  background-color: var(--secondColor);
+  transition: all 0.75s ease-in-out;
+}
+
+.myNavbar .navbar-brand,
+.myNavbar .offcanvas-title {
+  font-weight: 600;
+}
+
+.myNavbar .offcanvas-body .navbar-nav a {
+  color: #fff;
+}
+
+.myNavbar .offcanvas-body .navbar-nav a::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--acsentColor);
+  bottom: 5px;
+  left: 25%;
+  transition: all 0.3s ease-in-out;
+}
+
+.myNavbar .offcanvas-body .navbar-nav a:hover::before {
+  width: 50%;
+}
+
+/* NAVBAR END */
+
+/* HERO START */
+
+#hero h1 {
+  font-weight: 600;
+}
+#hero span {
+  color: var(--acsentColor);
+}
+
+#hero .btn {
+  border: 1px solid var(--acsentColor);
+  transition: all 0.3s ease-in-out;
+}
+
+#hero .btn:hover {
+  background-color: var(--acsentColor);
+  box-shadow: 0 0 10px var(--acsentColor);
+}
+
+#hero .cv {
+  font-size: 1.1rem;
+}
+
+#hero .social-icon svg {
+  margin-right: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+/* HERO END */
+
+/* ABOUT START */
+#about {
+  margin-top: 50px;
+  background-color: var(--secondColor);
+}
+/* ABOUT END */
+
+/* SKILLS START */
+#skills .card {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#skills .card h5 {
+  font-size: 1rem;
+}
+
+#skills .card p {
+  font-size: 0.75rem;
+}
+/* SLKILLS END */
+
+/* PROJECT START */
+#project {
+  background-color: var(--secondColor);
+}
+/* PROJECT END */
+
+/* FOOTER */
+#footer {
+  background-color: var(--secondColor);
+}
+
+#footer hr {
+  width: 50%;
+  transform: translateX(50%);
+  /* left: 25%; */
+}
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 992px) {
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  #project .card {
+    width: 75% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #hero h1 {
+    font-size: 1.5rem;
+  }
+
+  #hero .hero-img {
+    width: 75%;
+  }
+
+  #hero .btn {
+    margin-bottom: 75px !important;
+  }
+
+  #hero .social-icon {
+    transform: translateX(47%);
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #hero .social-icon a {
+    display: block;
+  }
+
+  .myNavbar .offcanvas-body .navbar-nav a:hover::before {
+    width: 25%;
+    left: 0;
+  }
+
+  #sertifikat img {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #hero .social-icon .cv {
+    font-size: 1rem;
+  }
+
+  #skills .card {
+    margin-bottom: 8px;
+  }
+}
